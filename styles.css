@@ -1,0 +1,494 @@
+/* =========================================================
+🎨 VARIABLES Y CONFIGURACIÓN GLOBAL
+========================================================= */
+:root{
+  --rb-navy:#001638;
+  --rb-navy-2:#0a193d;
+  --rb-red:#DB002C;
+  --rb-yellow:#FFC400;
+  --rb-text:#f5f7ff;
+  --rb-bg:#000000;
+  --font-title:'Cormorant Garamond', serif;
+--font-body:'Montserrat', sans-serif;
+  --rb-panel:#0d1226;
+  --rb-panel-2:#141a33;
+  --rb-tile:#0b0f20;
+  --rb-tile-edge:rgba(255,255,255,.06);
+}
+
+h1,h2{
+  font-family:var(--font-title);
+}
+html{
+  scroll-behavior:smooth;
+  background:#ffffff;
+}
+
+body{
+  margin:0;
+  padding:0;
+  font-family:var(--font-body);
+  background:#ffffff;
+}
+
+*{
+  font-family:'Century Gothic','Avant Garde',Arial,sans-serif;
+  box-sizing:border-box;
+}
+
+.contenedor-principal{
+  max-width:741px;
+  margin:0 auto;
+  width:100%;
+  overflow-x:hidden;
+  position:relative;
+  background:#ffffff;
+}
+
+/* =========================================================
+🖼️ BASE GENERAL PARA SECCIONES CON IMAGEN DE FONDO
+VERSIÓN IPHONE: IMAGEN COMPLETA
+========================================================= */
+.invitacion,
+.seccion-textura,
+.seccion-car-verde,
+.seccion-coc-verde,
+.seccion-rec-verde,
+.seccion-conf-verde,
+.seccion-dress{
+  position:relative;
+  width:100%;
+  height:100svh;
+  min-height:100svh;
+  background-size:auto 100%;
+  background-position:center top;
+  background-repeat:no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+/* =========================================================
+🏁 SECCIÓN 1: PORTADA
+========================================================= */
+.invitacion{
+  background-image:url('seb.png');
+}
+
+.contenido{
+  width:80%;
+  max-width:600px;
+  text-align:center;
+}
+
+.boton-ingresar{
+  display:inline-block;
+  margin-top:50rem;
+  padding:1rem 3rem;
+  border-radius:999px;
+  background:rgba(255,255,255,0.08);
+  color:#fff;
+  text-decoration:none;
+  font-size:1.1rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  border:1.5px solid rgba(255,255,255,0.6);
+  backdrop-filter:blur(6px);
+  box-shadow:0 8px 18px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.2);
+  transition:all .3s ease;
+}
+
+.boton-ingresar:hover{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,0.16);
+}
+
+/* =========================================================
+🎨 SECCIÓN 2: TEXTURA
+========================================================= */
+.seccion-textura{
+  background-image:url('seba.png');
+}
+
+/* =========================================================
+📸 SECCIÓN 3: RETRATOS
+========================================================= */
+.seccion-car-verde{
+  background-image:url('cab.png');
+}
+
+/* =========================================================
+🕒 SECCIÓN 4: CUENTA REGRESIVA
+========================================================= */
+.seccion-coc-verde{
+  background-image:url('cab.png');
+}
+
+/* =========================================================
+📍 SECCIÓN 5: UBICACIÓN
+========================================================= */
+.seccion-rec-verde{
+  background-image:url('cab.png');
+}
+
+/* =========================================================
+👕 SECCIÓN DRESS CODE
+========================================================= */
+.seccion-dress{
+  background-image:url('cab.png');
+}
+
+/* =========================================================
+💌 SECCIÓN 6: CONFIRMACIÓN
+========================================================= */
+.seccion-conf-verde{
+  background-image:url('cab.png');
+}
+
+/* =========================================================
+📦 TARJETA INTERNA
+========================================================= */
+.contenido-ubicacion{
+  background-color:#ffffff;
+  padding:1.2rem 1.5rem;
+  border-radius:16px;
+  box-shadow:0 6px 16px rgba(0,0,0,.25);
+  text-align:center;
+  width:90%;
+  max-width:300px;
+  margin:0 auto;
+  position:relative;
+  top:-60px;
+}
+
+.contenido-ubicacion h2{
+  margin:.2rem 0 1rem;
+  font-size:1.05rem;
+  color:#111;
+}
+
+.contenido-ubicacion p{
+  margin:.5rem 0;
+  color:#222;
+  line-height:1.35;
+}
+
+/* =========================================================
+✨ ÍCONOS
+========================================================= */
+.icono-cocodrilo{
+  width:40px;
+  height:auto;
+  display:block;
+  margin:0 auto 1rem auto;
+  transition:transform .3s ease;
+}
+
+#cuenta-regresiva .icono-cocodrilo,
+#ubicacion .icono-cocodrilo,
+#confirmacion .icono-cocodrilo{
+  width:40px;
+  height:auto;
+  margin-bottom:1.5rem;
+}
+
+#cuenta-regresiva .icono-cocodrilo{
+  filter:drop-shadow(0 0 12px rgba(255,255,255,.3));
+}
+
+#cuenta-regresiva .icono-cocodrilo:hover,
+#ubicacion .icono-cocodrilo:hover,
+#confirmacion .icono-cocodrilo:hover{
+  transform:scale(1.1);
+}
+
+/* =========================================================
+📸 RETRATOS
+========================================================= */
+#retratos h2{
+  font-size:1.4rem;
+  letter-spacing:2px;
+  font-weight:700;
+}
+
+.mensaje-retratos{
+  font-size:.85rem;
+  letter-spacing:1px;
+  line-height:1.5;
+  color:#555;
+  margin-bottom:1rem;
+}
+
+.carrusel{
+  width:80%;
+  max-width:380px;
+  margin:1rem auto;
+  border-radius:14px;
+  overflow:hidden;
+  background-color:#fff;
+  box-shadow:0 6px 14px rgba(0,0,0,.25);
+  transition:all .3s ease;
+}
+
+.carrusel img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  border-radius:14px;
+  transition:opacity .5s ease,transform .3s ease;
+}
+
+.carrusel img.fade-in{
+  opacity:1;
+  transform:scale(1);
+}
+
+.carrusel img.fade-out{
+  opacity:0;
+  transform:scale(.98);
+}
+
+/* =========================================================
+🕒 CUENTA REGRESIVA
+========================================================= */
+.mensaje-cuenta{
+  font-size:.85rem;
+  line-height:1.6;
+  color:#444;
+  margin-bottom:1.5rem;
+}
+
+.mensaje-cuenta strong{
+  display:block;
+  margin-top:.5rem;
+  font-size:.95rem;
+  letter-spacing:1px;
+}
+
+.reloj{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(80px,1fr));
+  gap:1rem;
+  justify-content:center;
+  align-items:center;
+}
+
+.reloj div{
+  background:linear-gradient(145deg,#7b8b6f,#5f6d56);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:18px;
+  padding:1rem .8rem;
+  text-align:center;
+  box-shadow:0 6px 16px rgba(0,0,0,.25), inset 0 1px 2px rgba(255,255,255,.2);
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.reloj div:hover{
+  box-shadow:0 0 12px rgba(123,139,111,0.45);
+}
+
+.reloj span{
+  display:block;
+  font-family:'Century Gothic',sans-serif;
+  font-weight:700;
+  font-size:2.3rem;
+  color:#ffffff;
+  text-shadow:0 0 8px rgba(255,255,255,0.4);
+}
+
+.reloj small{
+  display:block;
+  margin-top:.3rem;
+  font-family:'Century Gothic',sans-serif;
+  font-size:.8rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.8);
+  opacity:.85;
+}
+
+/* =========================================================
+📍 UBICACIÓN
+========================================================= */
+.highlight{
+  font-weight:700;
+}
+
+.mapa-contenedor{
+  width:100%;
+  height:200px;
+  border-radius:12px;
+  overflow:hidden;
+  margin:1rem 0;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.mapa-contenedor iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+}
+
+.boton-mapa{
+  display:inline-block;
+  margin-top:.5rem;
+  padding:.6rem 1.2rem;
+  background-color:#ead9c7;
+  color:#5a3e1b;
+  font-size:.95rem;
+  text-decoration:none;
+  border-radius:8px;
+  transition:background-color .3s ease,transform .3s ease;
+}
+
+.boton-mapa:hover{
+  background-color:#dfc4ad;
+  transform:translateY(-2px);
+}
+
+/* =========================================================
+💌 CONFIRMACIÓN
+========================================================= */
+.mensaje-confirmacion{
+  font-size:.85rem;
+  color:#444;
+  margin-bottom:1.2rem;
+  line-height:1.5;
+}
+
+#form-confirmacion{
+  display:flex;
+  flex-direction:column;
+  gap:.7rem;
+}
+
+#form-confirmacion input,
+#form-confirmacion textarea,
+#form-confirmacion select{
+  padding:.6rem;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:.9rem;
+  outline:none;
+}
+
+#form-confirmacion textarea{
+  min-height:90px;
+  resize:none;
+}
+
+#form-confirmacion button{
+  padding:.7rem;
+  background-color:#ead9c7;
+  color:#5a3e1b;
+  font-size:1rem;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  transition:background-color .3s ease,transform .3s ease;
+}
+
+#form-confirmacion button:hover{
+  background-color:#dfc4ad;
+  transform:translateY(-2px);
+}
+
+#mensaje-exito{
+  margin-top:.7rem;
+  font-size:.85rem;
+}
+
+/* =========================================================
+❤️ FOOTER
+========================================================= */
+.footer-invitacion{
+  background-color:#ffffff;
+  padding:3rem 1rem;
+  text-align:center;
+  color:#110b05;
+  border-top:2px solid #f5f4f3;
+}
+
+.contenido-footer{
+  width:90%;
+  max-width:300px;
+  margin:0 auto;
+}
+
+.contenido-footer p,
+.contenido-footer strong{
+  font-weight:700;
+  font-size:.7rem;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+/* =========================================================
+🎬 ANIMACIONES
+========================================================= */
+.animado-scroll{
+  opacity:0;
+  transform:translateX(-100px);
+  transition:all .8s ease;
+}
+
+.animado-scroll.mostrar{
+  opacity:1;
+  transform:translateX(0);
+}
+
+.animado-scroll .reloj div{
+  opacity:0;
+  transform:translateY(25px);
+  transition:opacity .8s ease,transform .8s ease;
+}
+
+.animado-scroll.mostrar .reloj div{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* =========================================================
+📱 RESPONSIVE
+========================================================= */
+@media (max-width:480px){
+  .boton-ingresar{
+    margin-top:20rem;
+    padding:.95rem 2rem;
+    font-size:1rem;
+  }
+
+  .contenido-ubicacion,
+  .contenido-footer{
+    padding:1rem;
+    max-width:95%;
+  }
+
+  .mensaje-retratos,
+  .mensaje-cuenta,
+  .mensaje-confirmacion{
+    font-size:.8rem;
+  }
+
+  .carrusel{
+    width:95%;
+    max-width:320px;
+  }
+
+  .reloj{
+    grid-template-columns:repeat(2,minmax(100px,1fr));
+    gap:.8rem;
+  }
+
+  .reloj span{
+    font-size:2rem;
+  }
+
+  .mapa-contenedor{
+    height:220px;
+  }
+}

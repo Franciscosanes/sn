@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yadi Estrada | 50 años</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="contenedor-principal">
+
+    <!-- ========================================================= -->
+    <!--  SECCIÓN 1: PORTADA -->
+    <!-- ========================================================= -->
+    <div class="invitacion">
+  <div class="contenido">
+    <a href="#textura" class="boton-ingresar" onclick="PlayAudio()">Entrar</a>
+  </div>
+</div>
+
+<div class="seccion-textura" id="textura"></div>
+
+<div class="seccion-car-verde" id="retratos">
+  <div class="contenido-ubicacion animado-scroll">
+    <img src="p1.jpeg" alt="Detalle decorativo" class="icono-cocodrilo">
+    <h2>Yadi Estrada</h2>
+<p class="mensaje-retratos">
+  Una mujer especial, fuerte y llena de amor.<br>
+  Hoy celebramos sus 50 años de vida.
+</p>
+    <div class="carrusel">
+      <img id="imagen-carrusel" src="yadi10.jpeg" alt="Retrato de Yadi">
+    </div>
+  </div>
+</div>
+
+<div class="seccion-coc-verde" id="cuenta-regresiva">
+  <div class="contenido-ubicacion animado-scroll">
+    <img src="p2.jpeg" alt="Detalle decorativo" class="icono-cocodrilo">
+    <h2>La cuenta regresiva ya comenzó...</h2>
+
+<p class="mensaje-cuenta">
+  Hay momentos en la vida que merecen celebrarse con el corazón.<br>
+
+  Después de tantos recuerdos, aprendizajes, sonrisas y amor compartido,
+  llegó el momento de celebrar los <strong>50 años de Yadi Estrada.</strong><br>
+
+  Una noche especial rodeada de las personas más importantes para ella.
+</p>
+
+<br><strong>16 de mayo, 7:00pm.</strong><br><br>
+    <div class="reloj">
+      <div><span id="dias2">0</span><small>días</small></div>
+      <div><span id="horas2">0</span><small>horas</small></div>
+      <div><span id="minutos2">0</span><small>min</small></div>
+      <div><span id="segundos2">0</span><small>seg</small></div>
+    </div>
+  </div>
+</div>
+
+<div class="seccion-rec-verde" id="ubicacion">
+  <div class="contenido-ubicacion animado-scroll">
+    <img src="p3.jpeg" alt="Ubicación" class="icono-cocodrilo">
+    <h2>El lugar donde celebraremos esta noche tan especial</h2>
+    
+    <p>Dirección: Cda. Francisco Sarabia #14, Tetepango, Hgo. México</p>
+
+    <div class="mapa-contenedor">
+      <iframe src="https://maps.google.com/maps?q=20.105544,-99.157187&z=15&output=embed" frameborder="0"></iframe>
+    </div>
+
+    <a href="https://maps.apple.com/?ll=20.105544,-99.157187&q=Mi%20ubicación&t=m" target="_blank" class="boton-mapa hover-effect">Cómo llegar</a>
+  </div>
+</div>
+<div class="seccion-conf-verde" id="confirmacion">
+  <div class="contenido-ubicacion animado-scroll">
+    <img src="p4.jpeg" alt="Confirmación" class="icono-cocodrilo">
+    <h2>Confirma tu asistencia</h2>
+
+    <p class="mensaje-confirmacion">
+  La mejor manera de celebrar la vida es compartiéndola con las personas que queremos.<br><br>
+
+  Tu presencia hará aún más especial esta noche dedicada a Yadi.<br>
+
+  Confirma tu asistencia y acompáñanos a celebrar sus 50 años llenos de historias, amor y momentos inolvidables.
+</p>
+
+    <section class="rsvp">
+      <form id="form-confirmacion">
+        <input type="text" placeholder="Escribe tu nombre" required>
+        <select name="acompanantes" required>
+          <option value="" disabled selected>Selecciona cuántos acompañantes llevarás</option>
+          <option value="0">0 (Voy solo/a)</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <textarea placeholder="Déjale un mensaje a Yadi"></textarea>
+        <button type="submit">Confirmar mi asistencia</button>
+      </form>
+      <div id="mensaje-exito"></div>
+    </section>
+  </div>
+</div>
+    <!-- ========================================================= -->
+    <!-- ❤️ SECCIÓN 7: PIE DE PÁGINA -->
+    <!-- ========================================================= -->
+    <footer class="footer-invitacion" id="footer">
+      <div class="contenido-footer">
+        <p>
+  Gracias por formar parte de esta celebración tan importante para nuestra familia.<br><br>
+
+  Hoy celebramos no solo 50 años de vida,<br>
+  sino una historia llena de amor, esfuerzo y recuerdos inolvidables.<br><br>
+
+  <strong>Con cariño, familia Sánchez Estrada.</strong>
+</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 🎵 AUDIO DE FONDO -->
+  <!-- ========================================================= -->
+  <audio id="musica1" autoplay loop>
+    <source src="lana.mp3" type="audio/mpeg">
+    Tu navegador no soporta reproducción de audio.
+  </audio>
+
+  <!-- ========================================================= -->
+  <!-- 📦 SCRIPT DEL FORMULARIO -->
+  <!-- ========================================================= -->
+  <script type="module" src="form.js"></script>
+</body>
+</html>
